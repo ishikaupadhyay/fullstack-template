@@ -3,6 +3,7 @@ import binascii
 import re
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from werkzeug.exceptions import HTTPException
 
 app = Flask(__name__)
 CORS(app)
@@ -107,6 +108,8 @@ def bfhl_post():
             "file_size_kb": size_kb
         }), 200
 
+    except HTTPException as e:
+        return jsonify({"is_success": False, "message": str(e)}), e.code
     except Exception as e:
         return jsonify({"is_success": False, "message": str(e)}), 500
 
