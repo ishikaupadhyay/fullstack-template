@@ -8,9 +8,9 @@ app = Flask(__name__)
 CORS(app)
 
 # Constants
-USER_ID = "john_doe_17091999"
-EMAIL = "john@xyz.com"
-ROLL_NUMBER = "ABCD123"
+USER_ID = "ishika_upadhyay_13082005"
+EMAIL = "ishikaupadhyay230142@acropolis.in"
+ROLL_NUMBER = "0827CD231039"
 
 def is_prime(n):
     """Checks if a number is prime."""
