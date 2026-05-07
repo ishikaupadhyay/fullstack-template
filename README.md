@@ -6,7 +6,7 @@ This project is a complete fullstack application developed for the Bajaj Finserv
 
 The application provides an interface to process mixed data (numbers and alphabets) via a specialized API. It features robust backend processing and a premium, responsive frontend with dynamic filtering.
 
-**Live Frontend**: [Vercel Deployment URL]
+**Live Frontend**: https://fullstack-template-psi.vercel.app/
 **Live Backend**: [https://fullstack-template-geuq.onrender.com/bfhl](https://fullstack-template-geuq.onrender.com/bfhl)
 
 ---
