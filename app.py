@@ -66,8 +66,11 @@ def bfhl_get():
 def bfhl_post():
     """Processes input data and optional file for the challenge."""
     try:
-        body = request.get_json()
-        if not body or "data" not in body:
+        body = request.get_json(silent=True)
+        if body is None:
+             return jsonify({"is_success": False, "message": "Invalid JSON format"}), 400
+             
+        if "data" not in body:
             return jsonify({"is_success": False, "message": "Missing 'data' field"}), 400
 
         data = body.get("data", [])
